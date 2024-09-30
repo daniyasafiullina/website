@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SoulFlow. Join us.</title>
+    <link rel="icon" type="images/png" href="medias/lotus.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/print.css" media="print">
+    <link rel="stylesheet" href="./css/contrast.css">   
+  </head>
+
+  <body>
+    <div class="main-container">
+      <header>
+        <a id="skip" href="#content">Skip to main content</a>
+        <div class="main-navigation">
+          <h1>SoulFlow. Switch your heart on.</h1>
+          <nav id="mainmenu">
+            <a href="index.html"> Home</a> |
+            <a href="yogatypes.html">Types of yoga</a> |
+            <a href="meditation.html"> Meditation </a> | <b> Join us </b>
+          </nav>
+        </div>
+      </header>
+
+      <button id="contrastToggle">High Contrast</button>
+
+      <form action="mailto:soulflow@mail.com" method="post">
+        <fieldset id="content">
+          <legend>Personal information</legend>
+          <label>
+            Name
+            <input type="text" >
+          </label>
+          <label>
+            Last name
+            <input type="text" >
+          </label>
+          <label>
+            Email
+            <input type="email" >
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Choosing plan</legend>
+          <fieldset>
+            <legend class="inner">Choose your yoga type</legend>
+            <label class="radio">
+              <input type="radio" name="type" checked >
+              Hatha Yoga
+            </label>
+            <label class="radio">
+              <input type="radio" name="type" >
+              Kundalini Yoga
+            </label>
+            <label class="radio">
+              <input type="radio" name="type" >
+              Ashtanga Vinyasa Yoga
+            </label>
+            <label class="radio">
+              <input type="radio" name="type" >
+              Anusara Yoga
+            </label>
+          </fieldset>
+          <label>
+            Specify your health conditions
+            <textarea></textarea>
+          </label>
+        </fieldset>
+        <button type="submit">Submit</button>
+        <button
+          type="reset"
+          onclick="return confirm('Do you want to reset form?')"
+        >
+          Reset
+        </button>
+      </form>
+      <footer>
+        <address>
+          <p>
+            <a href="mailto:soulflow@mail.com">soulflow@mail.com</a><br>
+            H-8888 Budapest, Noname street 27
+          </p>
+        </address>
+      </footer>
+    </div>
+    <script src="./js/app.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const contrastToggle = document.getElementById('contrastToggle');
+        const bodyElement = document.body;
+    
+        contrastToggle.addEventListener('click', () => {
+          bodyElement.classList.toggle('high-contrast');
+        });
+      });
+    </script>
+  </body>
+</html>

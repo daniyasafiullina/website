@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SoulFlow. Meditation.</title>
+    <link rel="icon" type="images/png" href="medias/lotus.png">
+    <meta charset="utf-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/print.css" media="print">
+    <link rel="stylesheet" href="./css/contrast.css">
+    <style>
+      #fullImageContainer {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+      }
+
+      #fullImage {
+        max-width: 60%;
+        max-height: 80%;
+      }
+
+      img:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <header>
+        <a id="skip" href="#content">Skip to main content</a>
+        <div class="main-navigation">
+          <h1>SoulFlow. Switch your heart on.</h1>
+          <nav id="mainmenu">
+            <a href="index.html"> Home</a> |
+            <a href="yogatypes.html">Types of yoga</a> | <b> Meditation </b> |
+            <a href="joinus.html"> Join us </a>
+          </nav>
+        </div>
+
+        <h2>Meditation</h2>
+        <figure>
+          <img
+            src="medias/meditation.jpg"
+            alt="Thumbnail of a meditating person."
+            onclick="showFullImage('medias/meditation-thumb.jpg')"
+          >
+        </figure>
+
+        <div id="fullImageContainer" onclick="hideFullImage()">
+          <img
+            id="fullImage"
+            src="medias/meditation-thumb.jpg"
+            alt="Full-size image"
+          >
+        </div>
+
+        <script>
+          function showFullImage(fullImagePath) {
+            const fullImageContainer =
+              document.getElementById("fullImageContainer");
+            const fullImage = document.getElementById("fullImage");
+
+            fullImage.src = fullImagePath;
+            fullImageContainer.style.display = "flex";
+          }
+
+          function hideFullImage() {
+            const fullImageContainer =
+              document.getElementById("fullImageContainer");
+            fullImageContainer.style.display = "none";
+          }
+        </script>
+
+        <button id="contrastToggle">High Contrast</button>
+
+        <blockquote>
+          <i
+            >“Meditation is to be aware of what is going on: in your body, in
+            your feelings,<br >
+            in your mind, and in the world.”</i
+          >
+          <i>― Thích Nhất Hạnh, Being Peace</i>
+        </blockquote>
+
+        <h2 id="content">Health benefits of meditaion</h2>
+        <h3>1. Stress Reduction:</h3>
+        <p>
+          Meditation is a powerful stress-reduction tool. It triggers a
+          relaxation response in the body, which decreases the production of
+          stress hormones like cortisol. With regular meditation, individuals
+          learn to manage and mitigate stress, fostering a sense of calm and
+          composure amidst life's pressures.
+        </p>
+
+        <h3>2. Enhanced Emotional Well-Being:</h3>
+        <p>
+          Scientific studies consistently show that meditation can improve
+          emotional well-being. It's been associated with a reduction in
+          symptoms of anxiety and depression. By cultivating mindfulness and
+          self-awareness, meditation empowers individuals to navigate their
+          emotional landscape with more resilience and control.
+        </p>
+
+        <h3>3. Improved Focus and Concentration:</h3>
+        <p>
+          In a world of constant distractions, meditation serves as a sharpening
+          tool for the mind. Through regular practice, it's possible to enhance
+          concentration, cognitive function, and memory. The stillness and focus
+          cultivated during meditation sessions can spill over into daily tasks,
+          improving productivity and the quality of one's work.
+        </p>
+
+        <h3>4. Mind-Body Harmony:</h3>
+        <p>
+          Modern life often disconnects us from our bodies and their signals.
+          Meditation acts as a bridge to reconnect with our physical selves. It
+          induces physical relaxation, reduces muscle tension, and alleviates
+          various stress-related physical ailments. This connection between mind
+          and body fosters overall well-being.
+        </p>
+        <div class="elevated-box">
+          <h2>Meditation with SoulFlow</h2>
+          <p>
+            Join Us for <i><strong>Free Meditation Sessions</strong></i
+            ><i> every Saturday&Sunday at 8 AM!</i>
+            <br>
+            At SoulFlow, we believe in the power of meditation to enhance
+            well-being and peace of mind. That's why we're excited to offer
+            complimentary meditation sessions to our community every Saturday &
+            Sunday at 8 AM. Whether you're a beginner or an experienced
+            meditator, our sessions are open to all. Come, relax, and find your
+            inner calm with us. We look forward to sharing this journey with
+            you.
+          </p>
+          <a href="joinus.html">JOIN US</a>
+        </div>
+      </header>
+
+      <footer>
+        <address>
+          <p>
+            <a href="mailto:soulflow@mail.com">soulflow@mail.com</a><br>
+            H-8888 Budapest, Noname street 27
+          </p>
+        </address>
+      </footer>
+    </div>
+    <script src="./js/app.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const contrastToggle = document.getElementById("contrastToggle");
+        const bodyElement = document.body;
+
+        contrastToggle.addEventListener("click", () => {
+          bodyElement.classList.toggle("high-contrast");
+        });
+      });
+    </script>
+  </body>
+</html>

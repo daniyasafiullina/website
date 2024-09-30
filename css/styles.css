@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  padding: 0;
+  color: #333;
+  background-color: hsl(194, 33%, 92%);
+  width: 70%;
+  font-family: Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.responsive-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.responsive-table th {
+  background-color: #f5f5f5;
+}
+
+@media screen and (max-width: 600px) {
+  .responsive-table {
+    overflow-x: auto;
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    white-space: nowrap;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  padding: 0.5rem;
+}
+
+td {
+  padding: 0.5rem;
+}
+
+figure {
+  width: 100%;
+  margin: 0;
+}
+
+figcaption {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+}
+
+blockquote {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0;
+  text-align: right;
+}
+
+legend {
+  font-weight: bold;
+}
+
+legend.inner {
+  font-weight: normal;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding-top: 0.4rem;
+}
+label.radio {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  align-items: baseline;
+}
+
+a:visited {
+  color: hsl(205, 31%, 50%);
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 1rem;
+}
+.main-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#skip {
+  position: absolute;
+  top: auto;
+  left: -1000px;
+  display: inline;
+}
+
+#skip:focus {
+  position: static;
+}
+
+.elevated-box {
+  padding: 1.25rem;
+  border: 1px solid rgb(62, 62, 62); 
+  margin: 2rem;
+  border-radius: 0.4rem;
+  box-shadow: 1rem 1rem 5px hsl(201, 30%, 45%);
+}
+
+.image-container {
+  width: 50%;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.video-container {
+  width: 60%;
+  margin: auto;
+  position: relative;
+}
+
+video {
+  width: 100%;
+  display: block;
+}
+
+.video-container progress {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-container::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../medias/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+
+@media screen and (max-width: 767px) {
+  .main-container::before {
+    display: none; 
+  }
+
+  .main-container {
+    width: 100%;
+    margin: 0; 
+  }
+
+  body {
+    background-color: #fff;
+    width: 90%; 
+    margin: auto; 
+  }
+}
+
+header {
+  text-align: left;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); 
+  position: relative; 
+  z-index: 1; 
+}
+
+form {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative; 
+  z-index: 1; 
+}
+
+footer {
+  text-align: left;
+  padding: 20px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); 
+  margin-top: auto;
+  position: relative; 
+  z-index: 1; 
+}
+
+@media screen and (max-width: 767px) {
+  .main-container::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  form {
+    text-align: center;
+  }
+}
+
+footer {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    text-align: center;
+  }
+}
+
+@media print {
+  body {
+    color: black; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 90%;/* Adjust font size for smaller screens */
+  }
+}
+
+

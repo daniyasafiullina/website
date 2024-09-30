@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  text-align: center;
+}
+
+body {
+  font-size: 14pt;
+  line-height: 1.6;
+}
+
+p {
+  page-break-inside: avoid;
+}
+
+h2, h3 {
+  page-break-before: auto;
+  page-break-after: auto;
+}
+
